@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <Title>Account - HAWK INDIA </Title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/logo.png">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/826e5d0dba.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="conatiner">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px"><img src="images/Lpu Logo.png" width="330px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <li><a href="Account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+<!-- ----------Account Page--------------- -->
+
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image111.png" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>  
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgot Password</a>
+                    </form>
+                    <form id="Reg">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------------footer------------- -->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download</h3>
+                <p>Download the App for Android and iOS</p>
+                <div class="app-logo">
+                    <a href=""><img src="images/play-store.png"></a>
+                    <a href=""><img src="images/app-store.png"></a>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <a href="index.html"><img src="images/logo-white.png"></a>
+                <p>Every Purchase Will Be Made With Pleasure. <br> Great Offers and Unique Collections.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="">Coupons</a></li>
+                    <li><a href="">Blog Post</a></li>
+                    <li><a href="">Return policy</a></li>
+                    <li><a href="">Join Afilitate</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li><a href="#" class="fab fa-facebook-f"></a> Facebook</li>
+                    <li><a href="#" class="fab fa-twitter"></a> Twitter</li>
+                    <li><a href="#" class="fab fa-instagram"></a> Instagram</li>
+                    <li><a href="#" class="fab fa-linkedin"></a> Linkedin</li>
+                    <li><a href="#" class="fab fa-pinterest"></a> Pinterest</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">CopyRight &copy; 2023 | Developed By Vikas&trade; Mukund&trade; Abhay&trade;</p>
+    </div>
+</div>
+
+<!-- ----js for toggle menu------- -->
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+
+            MenuItems.style.maxHeight = "0px";
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight = "200px";
+                }else{
+                    MenuItems.style.maxHeight = "0px";
+                }
+            }
+        </script>
+<!-- ----------js for toggle form-------- -->
+        <script>
+            var LoginForm=document.getElementById("LoginForm");
+            var Reg=document.getElementById("Reg");
+            var Indicator=document.getElementById("Indicator");
+            
+            function register(){
+                Reg.style.transform="translateX(0px)";
+                LoginForm.style.transform="translateX(0px)";
+                Indicator.style.transform="translateX(100px)";
+            }
+            function login(){
+                Reg.style.transform="translateX(300px)";
+                LoginForm.style.transform="translateX(300px)";
+                Indicator.style.transform="translateX(0px)";
+            }
+        </script>
+    </body>
+</html>
